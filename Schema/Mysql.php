@@ -2,9 +2,16 @@
 
 namespace Kanboard\Plugin\Broadcast\Schema;
 
-const VERSION = 1;
+use PDO;
 
-function version_1($pdo)
+const VERSION = 2;
+
+function version_2(PDO $pdo)
+{
+    $pdo->exec('ALTER TABLE `broadcast_message` CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci');
+}
+
+function version_1(PDO $pdo)
 {
     $pdo->exec('CREATE TABLE IF NOT EXISTS broadcast_message (
         message TEXT NOT NULL,

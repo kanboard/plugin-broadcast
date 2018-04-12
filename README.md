@@ -9,8 +9,8 @@ For example, it could be used to publish announcements or schedule maintenance.
 Requirements
 ------------
 
-- PHP >= 5.4
-- Kanboard >= 1.1.0
+- PHP >= 5.6
+- Kanboard >= 1.2.3
 
 Installation
 ------------
